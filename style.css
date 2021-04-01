@@ -1,0 +1,11 @@
+body 
+{
+    text-align: center;
+    margin-top: 5%;
+}
+
+#two, #three, #four
+{
+    display: none;
+}
+

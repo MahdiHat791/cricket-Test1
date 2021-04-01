@@ -1,0 +1,112 @@
+<html>
+    <head>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.2.0/p5.js"></script>
+        <link rel="stylesheet" type="text/css" href="style.css">
+    </head>
+    <body>
+        <div id="one">
+            <h2>Choose where you want to hit the ball</h2>
+            <img src ="image1.png" style="width: 300px;"><br>
+            <input type="radio" id="off" name="hit" value="off">
+            <label for="off">Off Side</label><br>
+            <input type="radio" id="leg" name="hit" value="leg">
+            <label for="leg">Leg Side</label><br>
+            <br><br>
+            <button onclick="oneNext()">Next</button>
+        </div>
+<!--        
+top1.1
+off - full - fast
+off - full - slow
+off - full - off
+off - full - leg
+
+top1.2
+off - good - fast
+off - good - slow
+off - good - off
+off - good - leg
+
+top1.3
+off - short - fast
+off - short - slow
+off - short - off
+off - short - leg
+
+top2.1
+leg - full - fast
+leg - full - slow
+leg - full - off
+leg - full - leg
+
+top2.2
+leg - good - fast
+leg - good - slow
+leg - good - off
+leg - good - leg
+
+top2.3
+leg - short - fast
+leg - short - slow
+leg - short - off
+leg - short - leg
+
+--------
+side1.1
+full - fast 
+full - slow 
+full - off  
+full - leg  
+
+side1.2
+good - fast 
+good - slow 
+good - off  
+good - leg  
+
+side1.3
+short - fast 
+short - slow 
+short - off  
+short - leg  
+-->
+        <div id="two">
+            <h2>Choose Bowling Length</h2>
+            <img src ="image3.jpeg" style="width: 300px;"><br>
+            <input type="radio" id="full" name="Length" value="full">
+            <label for="full">Full Length</label><br>
+            <input type="radio" id="good" name="Length" value="good">
+            <label for="good">Good Length</label><br>
+            <input type="radio" id="short" name="Length" value="short">
+            <label for="short">Short Length</label>
+            <br><br>
+            <button onclick="twoNext()">Next</button>
+        </div>
+
+        <div id="three">
+            <h2>Bowling Grips</h2>
+            <img src ="image2.png" style="width: 300px;"><br>
+            <input type="radio" id="fast" name="grips" value="fast">
+            <label for="fast">Fast Ball</label><br>
+            <input type="radio" id="slower" name="grips" value="slower">
+            <label for="slower">Slower Ball</label><br>
+            <input type="radio" id="off-grip" name="grips" value="off">
+            <label for="off-grip">Off Cutter</label><br>
+            <input type="radio" id="leg-grip" name="grips" value="leg">
+            <label for="leg-grip">Leg Cutter</label>
+            <br><br>
+            <button onclick="threeNext()">Next</button>
+        </div>
+
+        <div id="four">
+            <h2>Select View</h2>
+            <input type="radio" id="top-view" name="view" value="top-view">
+            <label for="top-view">Top View</label><br>
+            <input type="radio" id="side-view" name="view" value="side-view">
+            <label for="side-view">Side View</label>
+            <br><br>
+            <button onclick="fourNext()">Next</button>
+        </div>
+        <script src="main.js"></script>
+    </body>
+</html>
