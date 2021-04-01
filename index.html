@@ -99,13 +99,26 @@ short - leg
         </div>
 
         <div id="four">
+            <h2>Bowling Speed</h2>
+            <img src ="speed.png" style="width: 300px;"><br>
+            <input type="radio" id="90" name="speed" value="90">
+            <label for="90">90</label><br>
+            <input type="radio" id="95" name="speed" value="95">
+            <label for="95">95</label><br>
+            <input type="radio" id="100" name="speed" value="100">
+            <label for="100">100</label>
+            <br><br>
+            <button onclick="fourNext()">Next</button>
+        </div>
+
+        <div id="five">
             <h2>Select View</h2>
             <input type="radio" id="top-view" name="view" value="top-view">
             <label for="top-view">Top View</label><br>
             <input type="radio" id="side-view" name="view" value="side-view">
             <label for="side-view">Side View</label>
             <br><br>
-            <button onclick="fourNext()">Next</button>
+            <button onclick="fiveNext()">Next</button>
         </div>
         <script src="main.js"></script>
     </body>

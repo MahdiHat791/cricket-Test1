@@ -2,13 +2,21 @@ view_state = "";
 setNumber = "";
 ballX = 72;
 ballY = 169;
-ballBump = ""
+ballBump = "";
+
+TballX = 400
+TballY = 350
+
+function preload() 
+{
+    pitch = loadImage('image.jpg');
+}
 
 function setup() {
     canvas = createCanvas(800, 400);
     canvas.hide();
   }
-  
+   
   function draw() {
     console.log("X = " + mouseX + ", Y = " + mouseY)
     background(220);
@@ -16,7 +24,12 @@ function setup() {
     if(view_state == "top-view")
     {
         console.log("inside-top-view")
-    }
+        image(pitch, 200, 0,400,400);
+        rotate(PI / 60.0);
+        circle(TballX, TballY, 15);
+        TballX = TballX - 0.05;  
+        TballY = TballY - 0.9;
+        }
     if(view_state == "side-view")
     {
         console.log("inside-side-view")
@@ -91,16 +104,32 @@ function threeNext()
 
 function fourNext()
 {
-    getSelectedValue = document.querySelector('input[name="view"]:checked');   
+    getSelectedValue = document.querySelector('input[name="speed"]:checked');   
     if(getSelectedValue != null)
     {
         four = getSelectedValue.value;
+        console.log(four);
         document.getElementById("four").style.display = 'none';
-        if(four == "side-view")
+        document.getElementById("five").style.display = 'block';
+    }
+    else
+    {
+        console.log("please select");
+    }
+}
+
+function fiveNext()
+{
+    getSelectedValue = document.querySelector('input[name="view"]:checked');   
+    if(getSelectedValue != null)
+    {
+        five = getSelectedValue.value;
+        document.getElementById("four").style.display = 'none';
+        if(five == "side-view")
         {
             sideView();
         }
-        else if(four == "top-view")
+        else if(five == "top-view")
         {
             topView();
         }
